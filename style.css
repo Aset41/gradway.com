@@ -1,0 +1,405 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    height: 100vh;
+    display: flex;
+}
+
+.sidebar {
+    width: 400px;
+    background-color: #0a151d;
+    color: white;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+#map {
+    flex: 1;
+    height: 100%;
+}
+
+.university-list {
+    margin-top: 20px;
+}
+
+.university-item {
+    background-color: #3f464d;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.university-item:hover {
+    background-color: #4a525a;
+}
+
+.university-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.university-location {
+    font-size: 14px;
+    color: #aaa;
+}
+
+.location-btn {
+    background-color: #00bec4;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    width: 100%;
+    font-weight: bold;
+}
+
+.location-btn i {
+    margin-right: 8px;
+}
+
+/* Стили для маркера пользователя */
+.user-location-icon {
+    background: transparent;
+    border: none;
+}
+
+.university-description {
+  font-size: 14px;
+  color: #555;
+  margin: 8px 0;
+  line-height: 1.4;
+}
+
+.university-website {
+  display: inline-block;
+  font-size: 13px;
+  color: #2575fc;
+  text-decoration: none;
+  margin-top: 5px;
+}
+
+.university-website:hover {
+  text-decoration: underline;
+}
+
+.university-website i {
+  margin-right: 5px;
+}
+
+/* Стиль для попапа на карте */
+.leaflet-popup-content {
+  min-width: 200px;
+}
+
+.leaflet-popup-content h3 {
+  margin: 0 0 5px 0;
+  font-size: 16px;
+  color: #2575fc;
+}
+
+.leaflet-popup-content p {
+  margin: 5px 0;
+  font-size: 14px;
+}
+
+.leaflet-popup-content a {
+  color: #2575fc;
+  text-decoration: none;
+}
+
+.leaflet-popup-content a:hover {
+  text-decoration: underline;
+}
+
+/* Стили для списка университетов */
+.university-list {
+    margin-top: 20px;
+    max-height: calc(100vh - 200px);
+    overflow-y: auto;
+    padding-right: 10px;
+}
+
+.university-item {
+    background: white;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.university-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.university-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.university-name {
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+    margin: 0;
+}
+
+.university-location {
+    font-size: 14px;
+    color: #666;
+    background: #f5f5f7;
+    padding: 3px 8px;
+    border-radius: 12px;
+}
+
+.university-description {
+    font-size: 14px;
+    color: #555;
+    line-height: 1.4;
+    margin: 10px 0;
+}
+
+.university-link {
+    display: inline-block;
+    font-size: 13px;
+    color: #2575fc;
+    text-decoration: none;
+}
+
+.university-link:hover {
+    text-decoration: underline;
+}
+
+.university-link i {
+    margin-right: 5px;
+}
+
+/* Стили для скроллбара */
+.university-list::-webkit-scrollbar {
+    width: 6px;
+}
+
+.university-list::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 3px;
+}
+
+.university-list::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 3px;
+}
+
+.university-list::-webkit-scrollbar-thumb:hover {
+    background: #aaa;
+}
+
+/* Стили для списка университетов */
+.university-list {
+  margin-top: 20px;
+  max-height: calc(100vh - 200px);
+  overflow-y: auto;
+  padding-right: 10px;
+}
+
+.university-item {
+  background: white;
+  border-radius: 10px;
+  padding: 15px;
+  margin-bottom: 15px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.university-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.university-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.university-name {
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+  margin: 0;
+}
+
+.university-location {
+  font-size: 14px;
+  color: #666;
+  background: #f5f5f7;
+  padding: 3px 8px;
+  border-radius: 12px;
+}
+
+.university-description {
+  font-size: 14px;
+  color: #555;
+  line-height: 1.4;
+  margin: 10px 0;
+}
+
+.university-link {
+  display: inline-block;
+  font-size: 13px;
+  color: #2575fc;
+  text-decoration: none;
+}
+
+.university-link:hover {
+  text-decoration: underline;
+}
+
+.university-link i {
+  margin-right: 5px;
+}
+
+/* Стили для скроллбара */
+.university-list::-webkit-scrollbar {
+  width: 6px;
+}
+
+.university-list::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 3px;
+}
+
+.university-list::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 3px;
+}
+
+.university-list::-webkit-scrollbar-thumb:hover {
+  background: #aaa;
+}
+/* --------- SIDEBAR --------- */
+.sidebar {
+  width: 400px;
+  background-color: #0a151d;
+  color: #ffffff;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.sidebar h1 {
+  font-size: 22px;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+/* --------- BUTTON --------- */
+.location-btn {
+  background-color: #00bec4;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  width: 100%;
+  font-weight: 600;
+  font-size: 15px;
+  transition: background-color 0.3s ease;
+}
+
+.location-btn:hover {
+  background-color: #00a6ab;
+}
+
+/* --------- UNIVERSITY ITEM --------- */
+.university-item {
+  background: #1e2a34;
+  color: #ffffff;
+  border-radius: 10px;
+  padding: 15px;
+  margin-bottom: 15px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  transition: all 0.3s ease;
+}
+
+.university-item:hover {
+  background: #2b3a46;
+  transform: translateY(-3px);
+}
+
+/* --------- HEADER --------- */
+.university-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.university-name {
+  font-size: 17px;
+  font-weight: 600;
+  color: #ffffff;
+  margin: 0;
+}
+
+.university-location {
+  font-size: 13px;
+  color: #bbbbbb;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 3px 10px;
+  border-radius: 12px;
+}
+
+/* --------- TEXT --------- */
+.university-description {
+  font-size: 14px;
+  color: #d3d3d3;
+  margin-top: 8px;
+  line-height: 1.5;
+}
+
+.university-link {
+  font-size: 13px;
+  color: #00d4ff;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 5px;
+}
+
+.university-link:hover {
+  text-decoration: underline;
+}
+
+/* --------- SCROLLBAR --------- */
+.university-list::-webkit-scrollbar {
+  width: 6px;
+}
+
+.university-list::-webkit-scrollbar-track {
+  background: #0a151d;
+  border-radius: 3px;
+}
+
+.university-list::-webkit-scrollbar-thumb {
+  background: #444;
+  border-radius: 3px;
+}
+
+.university-list::-webkit-scrollbar-thumb:hover {
+  background: #666;
+}

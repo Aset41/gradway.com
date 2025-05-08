@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Грант калькуляторы</title>
+    <link rel="stylesheet" href="style4.css">
+</head>
+<body>
+
+    <header class="custom-header">
+        <div class="header-left">
+          <img src="1logo.jpg" alt="Logo" class="logo-icon" />
+          <span class="logo-text">GradWay</span>
+        </div>
+        <nav class="header-nav">
+          <a href="index.html">Басты бет</a>
+          <a href="vuz.html" >Университеттер</a>
+          <a href="proffesions.html">Мамандықтар</a>
+          <a href="calculator.html" class="active-link">Калькулятор</a>
+        </nav>
+        
+        <div class="header-right">
+          <div class="lang-selector"><i class="fas fa-globe"></i> KK</div>
+          <a href="profile.html" class="user-profile-link">
+            <div class="user-profile">
+              <img src="" alt="User" />
+              <span>Профиль</span>
+            </div>
+          </a>
+          
+      </header>
+    
+    
+    <div class="container">
+        <!-- Блок 1: Предметы и баллы -->
+        <div class="block">
+            <h2>Пәндер бойынша есептеу</h2>
+            <p>Пәндерді және жалпы баллды енгізіңіз. Университетке түсу мүмкіндігі пайызын көрсетіледі.</p>
+            
+            <div class="subject-item">
+                <label>Пән 1:</label>
+                <select id="subject1">
+                    <option value="">Пән таңдаңыз</option>
+                    <option value="math">Математика</option>
+                    <option value="physics">Физика</option>
+                    <option value="chemistry">Химия</option>
+                    <option value="biology">Биология</option>
+                    <option value="history">Тарих</option>
+                    <option value="literature">Әдебиет</option>
+                    <option value="foreign">Шет тілі</option>
+                </select>
+            </div>
+            
+            <div class="subject-item">
+                <label>Пән 2:</label>
+                <select id="subject2">
+                    <option value="">Пән таңдаңыз</option>
+                    <option value="math">Математика</option>
+                    <option value="physics">Физика</option>
+                    <option value="chemistry">Химия</option>
+                    <option value="biology">Биология</option>
+                    <option value="history">Тарих</option>
+                    <option value="literature">Әдебиет</option>
+                    <option value="foreign">Шет тілі</option>
+                </select>
+            </div>
+            
+            <label>Жалпы балл (0-140):</label>
+            <input type="number" id="total-score" min="0" max="140">
+            
+            <button id="calculate-btn">Есептеу</button>
+            
+            <div id="university-result" class="result">
+                <h3>Ұсынылатын университеттер:</h3>
+                <div id="university-list"></div>
+            </div>
+        </div>
+        
+        <!-- Блок 2: Сертификаты -->
+        <div class="block">
+            <h2>Сертификаттар бойынша есептеу</h2>
+            <p>Файлдарды жүктеп, орташа баллды есептеңіз.</p>
+            
+            <div class="file-upload">
+                <label for="certificate-files" class="file-btn">Файлдарды таңдау</label>
+                <input type="file" id="certificate-files" multiple accept=".pdf,.jpg,.png">
+                <span id="file-status">Файл таңдалмады</span>
+            </div>
+            
+            <button id="calculate-avg-btn">Есептеу</button>
+            
+            <div id="avg-result" class="result">
+                <h3>Орташа балл:</h3>
+                <p id="avg-score"></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="calculator.js"></script>
+</body>
+</html>

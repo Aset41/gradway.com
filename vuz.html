@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Университеттер</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="style2.css" />
+</head>
+<body>
+
+  <!-- ======= Жоғарғы панель ======= -->
+  <header class="custom-header">
+    <div class="header-left">
+      <img src="1logo.jpg" alt="Logo" class="logo-icon" />
+      <span class="logo-text">GradWay</span>
+    </div>
+    <nav class="header-nav">
+      <a href="index.html">Басты бет</a>
+      <a href="vuz.html" class="active-link">Университеттер</a>
+      <a href="proffesions.html" >Мамандықтар</a>
+      <a href="calculator.html">Калькулятор</a>
+    </nav>
+    
+    <div class="header-right">
+      <div class="lang-selector"><i class="fas fa-globe"></i> KK</div>
+      <a href="profile.html" class="user-profile-link">
+        <div class="user-profile">
+          <img src="Саддрадин фото.png" alt="User" />
+          <span>Профиль</span>
+        </div>
+      </a>
+      
+  </header>
+
+  <!-- ======= Контент ======= -->
+  <div class="main-content">
+    <div class="page-header">
+      <h1>Қазақстанның үздік университеттері</h1>
+      <p>Сапалы білім беретін жоғары оқу орындарының тізімі</p>
+
+      <a href="index1.html" class="floating-map-button" title="Карта">
+        <i class="fas fa-map-marked-alt"></i>
+      </a>
+      
+
+    <!-- Университет карталары JavaScript арқылы қосылады -->
+    <div class="vuz-cards" id="vuz-cards"></div>
+
+    <!-- Пагинация -->
+    <div class="pagination">
+      <button id="prev-page" disabled><i class="fas fa-chevron-left"></i> Артқа</button>
+      <span id="page-info">Страница 1 из N</span>
+      <button id="next-page">Келесі <i class="fas fa-chevron-right"></i></button>
+    </div>
+  </div>
+
+  <!-- JavaScript -->
+  <script src="vuz.js"></script>
+</body>
+</html>

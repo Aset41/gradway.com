@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Қазақстандағы мамандықтар</title>
+  <link rel="stylesheet" href="style3.css">
+  <script defer src="script-professions.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+  <header class="custom-header">
+    <div class="header-left">
+      <img src="1logo.jpg" alt="Logo" class="logo-icon" />
+      <span class="logo-text">GradWay</span>
+    </div>
+    <nav class="header-nav">
+      <a href="index.html">Басты бет</a>
+      <a href="vuz.html">Университеттер</a>
+      <a href="proffesions.html" class="active-link">Мамандықтар</a>
+      <a href="calculator.html">Калькулятор</a>
+    </nav>
+    
+    <div class="header-right">
+      <div class="lang-selector"><i class="fas fa-globe"></i> KK</div>
+      <a href="profile.html" class="user-profile-link">
+        <div class="user-profile">
+          <img src="Саддрадин фото.png" alt="User" />
+          <span>Профиль</span>
+        </div>
+      </a>
+      
+  </header>
+
+  <main>
+    <section class="filter-section">
+      <h1>Мамандықтар</h1>
+      <p>Пәндерді таңдап, өзіңізге сәйкес келетін мамандықтарды көріңіз</p>
+      <div id="subject-filters">
+        <label><input type="checkbox" value="Математика"> Математика</label>
+        <label><input type="checkbox" value="Физика"> Физика</label>
+        <label><input type="checkbox" value="Биология"> Биология</label>
+        <label><input type="checkbox" value="Химия"> Химия</label>
+        <label><input type="checkbox" value="География"> География</label>
+        <label><input type="checkbox" value="Информатика"> Информатика</label>
+        <label><input type="checkbox" value="Қазақ тілі"> Қазақ тілі</label>
+        <label><input type="checkbox" value="Тарих"> Тарих</label>
+      </div>
+    </section>
+
+    <section class="card-container" id="profession-cards">
+      <!-- Карточкалар JavaScript арқылы шығады -->
+    </section>
+  </main>
+  
+  <!-- Мамандық туралы толық ақпарат шығатын модаль -->
+<div id="modal" class="modal" style="display: none;">
+  <div class="modal-content">
+    <span id="modal-close">&times;</span>
+    <h2 id="modal-title"></h2>
+    <p><strong>Сұраныс:</strong> <span id="modal-demand"></span></p>
+    <p><strong>Код:</strong> <span id="modal-code"></span></p>
+    <p><strong>Пәндер:</strong> <span id="modal-subjects"></span></p>
+    <p><strong>Оқу мерзімі:</strong> <span id="modal-duration"></span></p>
+    <p><strong>Шекті балл:</strong> <span id="modal-score"></span></p>
+    <p><strong>Жалақы:</strong> <span id="modal-salary"></span></p>
+    <p><strong>Толық сипаттама:</strong> <span id="modal-description"></span></p>
+  </div>
+</div>
+
+</body>
+</html>

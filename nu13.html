@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>МУИТ - Халықаралық ақпараттық технологиялар университеті</title>
+  <link rel="stylesheet" href="nu.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+
+  <div class="breadcrumb-box">
+    <a href="vuz.html"><i class="fas fa-university"></i> УНИВЕРСИТТЕТТЕР</a>
+    <span>/</span>
+    <span class="current">МУИТ - Халықаралық ақпараттық технологиялар университеті</span>
+  </div>
+
+  <div class="nu-container">
+
+    <div class="nu-info-left">
+      <img src="iitu.jpg" alt="IITU Logo">
+      <h1>МУИТ - Халықаралық ақпараттық технологиялар университеті</h1>
+      <p><i class="fas fa-map-marker-alt"></i> Манас көшесі, 34А, Алматы</p>
+      <p>Код: 190</p>
+    </div>
+
+    <div class="nu-main">
+      <div class="tabs">
+        <button class="tab active">Описание</button>
+        <button class="tab">Специальности</button>
+      </div>
+
+      <div class="tab-content" id="description-tab">
+        <p>Халықаралық ақпараттық технологиялар университеті — IT, киберқауіпсіздік, робототехника және телекоммуникация саласында терең білім беретін инновациялық ЖОО. 🎓</p>
+        <ul>
+          <li>💻 Қазақстандағы үздік IT университет</li>
+          <li>🛡️ Ақпараттық қауіпсіздік мамандығы бойынша жетекші орын</li>
+          <li>🤖 Робототехника және жасанды интеллект</li>
+          <li>🌍 Шетелдік серіктестіктермен бағдарламалар</li>
+          <li>🎓 Студенттерге арналған стартап-инкубатор</li>
+        </ul>
+      </div>
+
+      <div class="tab-content" id="specialties-tab" style="display: none;">
+        <table border="1" cellpadding="10" cellspacing="0" style="border-collapse: collapse; width: 100%; font-family: Arial, sans-serif;">
+          <thead style="background-color: #f4f4f4;">
+            <tr>
+              <th>Мамандық атауы</th>
+              <th>Код</th>
+              <th>Грант саны</th>
+              <th>Минималды балл</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Ақпараттық технологиялар</td><td>B057</td><td>450</td><td>97</td></tr>
+            <tr><td>Ақпараттық қауіпсіздік</td><td>B058</td><td>200</td><td>90</td></tr>
+            <tr><td>Робототехника және мехатроника</td><td>B062</td><td>180</td><td>87</td></tr>
+            <tr><td>Комуникация және телекоммуникациялық жүйелер</td><td>B059</td><td>120</td><td>85</td></tr>
+            <tr><td>Мультимедиа технологиялар</td><td>B029</td><td>100</td><td>83</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="comments-section">
+        <h3>Пікірлер</h3>
+
+        <div class="comment"><strong>Дамир:</strong> IT мамандығына тек осы университетке түскім келеді!</div>
+        <div class="comment"><strong>Айгерім:</strong> МУИТ киберқауіпсіздік бағыты өте сапалы.</div>
+        <div class="comment"><strong>Жасұлан:</strong> Робототехника зертханасы заманауи екен.</div>
+        <div class="comment"><strong>Мөлдір:</strong> Грантқа түсу үшін қанша балл керек?</div>
+        <div class="comment"><strong>Нұрислам:</strong> Шетелдік серіктестіктер мені қызықтырады.</div>
+
+        <form class="comment-form">
+          <textarea placeholder="Пікіріңізді жазыңыз..."></textarea>
+          <button type="submit">Жіберу</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="nu-sidebar">
+      <div class="box">
+        <h3>Об университете</h3>
+        <p><strong>Средняя цена:</strong> 1 300 000 ₸</p>
+        <p><strong>Статус:</strong> Жекеменшік</p>
+        <p><strong>Общежитие:</strong> Бар</p>
+        <p><strong>Военная кафедра:</strong> Жоқ</p>
+        <p><strong>Сынақ:</strong> ҰБТ</p>
+        <button class="consult-btn">Консультация алу</button>
+      </div>
+      <div class="box">
+        <h3>Контакты</h3>
+        <p><i class="fas fa-phone"></i> +7 727 244 51 04</p>
+        <p><i class="fas fa-globe"></i> <a href="https://iitu.edu.kz" target="_blank">iitu.edu.kz</a></p>
+        <p><i class="fab fa-facebook"></i> <a href="#">Facebook</a></p>
+        <p><i class="fab fa-instagram"></i> <a href="#">Instagram</a></p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const tabs = document.querySelectorAll('.tab');
+    const descriptionTab = document.getElementById('description-tab');
+    const specialtiesTab = document.getElementById('specialties-tab');
+
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        tabs.forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+
+        if (tab.textContent === "Описание") {
+          descriptionTab.style.display = "block";
+          specialtiesTab.style.display = "none";
+        } else {
+          descriptionTab.style.display = "none";
+          specialtiesTab.style.display = "block";
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>

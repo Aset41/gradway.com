@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Алматинский Технологический Университет</title>
+  <link rel="stylesheet" href="nu.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+
+  <div class="breadcrumb-box">
+    <a href="vuz.html"><i class="fas fa-university"></i> УНИВЕРСИТТЕТТЕР</a>
+    <span>/</span>
+    <span class="current">Алматинский Технологический Университет</span>
+  </div>
+
+  <div class="nu-container">
+
+    <div class="nu-info-left">
+      <img src="atu.jpg" alt="ATU Logo">
+      <h1>Алматинский Технологический Университет</h1>
+      <p><i class="fas fa-map-marker-alt"></i> Төле би көшесі, 100</p>
+      <p>Код: 015</p>
+    </div>
+
+    <div class="nu-main">
+      <div class="tabs">
+        <button class="tab active">Описание</button>
+        <button class="tab">Специальности</button>
+      </div>
+
+      <div class="tab-content" id="description-tab">
+        <p>Алматинский Технологиялық Университеті – тағам өндірісі, тоқыма және дизайн, химия технологиясы, экология, стандарттау салаларында мықты бағытталған Қазақстандағы жетекші техникалық ЖОО. 🎓</p>
+        <ul>
+          <li>🍞 Азық-түлік өндірісі бағытындағы үздік университет</li>
+          <li>🏭 Индустриялық практика және зертхана</li>
+          <li>🎨 Дизайн және сән саласында жоғары рейтинг</li>
+          <li>🌿 Экология және биотехнология бойынша жаңа бағдарламалар</li>
+          <li>🧪 Химиялық инженерия және зертханалар</li>
+        </ul>
+      </div>
+
+      <div class="tab-content" id="specialties-tab" style="display: none;">
+        <table border="1" cellpadding="10" cellspacing="0" style="border-collapse: collapse; width: 100%; font-family: Arial, sans-serif;">
+          <thead style="background-color: #f4f4f4;">
+            <tr>
+              <th>Мамандық атауы</th>
+              <th>Код</th>
+              <th>Грант саны</th>
+              <th>Минималды балл</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Азық-түлік өнімдерінің өндірісі</td><td>B068</td><td>560</td><td>75</td></tr>
+            <tr><td>Химиялық инженерия</td><td>B071</td><td>430</td><td>72</td></tr>
+            <tr><td>Тоқыма өндірісі және дизайн</td><td>B031</td><td>320</td><td>88</td></tr>
+            <tr><td>Стандартизация және сертификаттау</td><td>B076</td><td>270</td><td>74</td></tr>
+            <tr><td>Экология және табиғи ресурстар</td><td>B051</td><td>480</td><td>85</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="comments-section">
+        <h3>Пікірлер</h3>
+
+        <div class="comment"><strong>Аружан:</strong> АТУ-да кондитер болуға үйретеді ма?</div>
+        <div class="comment"><strong>Жанболат:</strong> Дизайн бағыты мықты ма?</div>
+        <div class="comment"><strong>Әсел:</strong> Тамақ технологиясымен шетелде жұмыс табуға бола ма?</div>
+        <div class="comment"><strong>Бексұлтан:</strong> Жатақхана қай жерде орналасқан?</div>
+        <div class="comment"><strong>Мөлдір:</strong> Стандарттау мен сертификаттау бойынша білім терең бе?</div>
+
+        <form class="comment-form">
+          <textarea placeholder="Пікіріңізді жазыңыз..."></textarea>
+          <button type="submit">Жіберу</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="nu-sidebar">
+      <div class="box">
+        <h3>Университет туралы</h3>
+        <p><strong>Средняя цена:</strong> 950 000 ₸</p>
+        <p><strong>Статус:</strong> Жекеменшік</p>
+        <p><strong>Общежитие:</strong> Бар</p>
+        <p><strong>Военная кафедра:</strong> Жоқ</p>
+        <p><strong>Сынақ:</strong> ҰБТ</p>
+        <button class="consult-btn">Консультация алу</button>
+      </div>
+      <div class="box">
+        <h3>Контакты</h3>
+        <p><i class="fas fa-phone"></i> +7 727 396 78 50</p>
+        <p><i class="fas fa-globe"></i> <a href="https://atu.kz" target="_blank">atu.kz</a></p>
+        <p><i class="fab fa-facebook"></i> <a href="#">Facebook</a></p>
+        <p><i class="fab fa-instagram"></i> <a href="#">Instagram</a></p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const tabs = document.querySelectorAll('.tab');
+    const descriptionTab = document.getElementById('description-tab');
+    const specialtiesTab = document.getElementById('specialties-tab');
+
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        tabs.forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+
+        if (tab.textContent === "Описание") {
+          descriptionTab.style.display = "block";
+          specialtiesTab.style.display = "none";
+        } else {
+          descriptionTab.style.display = "none";
+          specialtiesTab.style.display = "block";
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>
