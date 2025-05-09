@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="kk">
+<meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>GradWay – Білім мен табысқа жол</title>
+  <meta name="description" content="GradWay — оқушылар мен студенттерге арналған заманауи білім беру платформасы. ҰБТ дайындық, курстар, пайдалы кеңестер." />
+  <meta name="keywords" content="GradWay, білім, ҰБТ, дайындық, университет, курс, оқу, студент" />
+  <meta name="author" content="GradWay" />
+  <meta property="og:title" content="GradWay – Білім платформасы" />
+  <meta property="og:description" content="ҰБТ-ға дайындық, онлайн курстар және студенттерге арналған пайдалы ресурстар." />
+  <meta property="og:url" content="https://gradway.kz/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://gradway.kz/preview.png" />
+  <link rel="canonical" href="https://gradway.kz/" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="index.css"> <!-- Стильдерді бөлек файлға салған дұрыс -->
+  <link rel="icon" href="1logo.jpg" type="image/x-icon" />
+
+</head>
+<body>
+  <header class="custom-header">
+    <div class="header-left">
+      <img src="1logo.jpg" alt="Logo" class="logo-icon" />
+      <span class="logo-text">GradWay</span>
+    </div>
+    <nav class="header-nav">
+      <a href="index.html" class="active-link">Басты бет</a>
+      <a href="vuz.html">Университеттер</a>
+      <a href="proffesions.html">Мамандықтар</a>
+      <a href="calculator.html">Калькулятор</a>
+    </nav>
+    
+    <div class="header-right">
+      <div class="lang-selector"><i class="fas fa-globe"></i> KK</div>
+      <a href="profile.html" class="user-profile-link">
+        <div class="user-profile">
+          <img src="Саддрадин фото.png" alt="User" />
+          <span>Профиль</span>
+        </div>
+      </a>
+      
+  </header>
+
+  <div id="main-page">
+    <div class="promo-banner">
+      <img src="Qazbilim.kz.png" alt="Жарнама баннері" />
+    </div>
+
+    <div class="filter-bar">
+      <button class="filter-btn active">Барлығы</button>
+      <button class="filter-btn">Марафондар</button>
+      <button class="filter-btn">Акциялар</button>
+      <button class="filter-btn">ҰБТ</button>
+      <button class="filter-btn">Гранттар</button>
+      <button class="filter-btn">Курстар</button>
+      <button class="filter-btn">Олимпиадалар</button>
+      <button class="filter-btn">Семинарлар</button>
+    </div>
+
+    <div class="content-cards">
+      <div class="card" onclick="showEvent('event1')">
+        <div class="card-badge">Марафон</div>
+        <div class="card-img">
+          <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=500&q=80" alt="Марафон">
+        </div>
+        <div class="card-content">
+          <div class="card-title">10-СЫНЫПТАР ҮШІН 2 КҮНДІК МАРАФОН</div>
+          <div class="card-stats">
+            <div class="stat"><i class="fas fa-eye"></i> 777</div>
+            <div class="stat"><i class="far fa-comment"></i> 23</div>
+            <div class="stat"><i class="far fa-heart"></i> 45</div>
+          </div>
+        </div>
+      </div>
+            <!-- Вторая карточка -->
+            <div class="card" onclick="showEvent('event2')">
+              <div class="card-badge" style="background-color: var(--danger);">Акция</div>
+              <div class="card-img">
+                <img src="https://images.unsplash.com/photo-1541178735493-479c1a27ed24?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Скидка на курсы">
+              </div>
+              <div class="card-content">
+                <div class="card-title">9-МАМЫРҒА ОРАЙ КУРСҚА ТІРКЕЛУГЕ -50% ЖЕҢІЛДІК</div>
+                <div class="card-stats">
+                  <div class="stat"><i class="fas fa-eye"></i> 1,245</div>
+                  <div class="stat"><i class="far fa-comment"></i> 37</div>
+                  <div class="stat"><i class="far fa-heart"></i> 128</div>
+                </div>
+              </div>
+            </div>
+          
+            <!-- Третья карточка -->
+            <div class="card" onclick="showEvent('event3')">
+              <div class="card-badge" style="background-color: var(--success);">ЕНТ</div>
+              <div class="card-img">
+                <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Правила ЕНТ">
+              </div>
+              <div class="card-content">
+                <div class="card-title">ҰБТ ЕРЕЖЕЛЕРІ 2025: ЖАҢА ӨЗГЕРІСТЕР</div>
+                <div class="card-stats">
+                  <div class="stat"><i class="fas fa-eye"></i> 2,539</div>
+                  <div class="stat"><i class="far fa-comment"></i> 84</div>
+                  <div class="stat"><i class="far fa-heart"></i> 315</div>
+                </div>
+              </div>
+            </div>
+          
+            <!-- Четвертая карточка -->
+            <div class="card" onclick="showEvent('event4')">
+              <div class="card-badge" style="background-color: #7209b7;">Гранты</div>
+              <div class="card-img">
+                <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Гранты на обучение">
+              </div>
+              <div class="card-content">
+                <div class="card-title">Гранттық түсу мүмкіндігі - ҰБТ дайындық</div>
+                <div class="card-stats">
+                  <div class="stat"><i class="fas fa-eye"></i> 1,425</div>
+                  <div class="stat"><i class="far fa-comment"></i> 47</div>
+                  <div class="stat"><i class="far fa-heart"></i> 222</div>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Пятая карточка -->
+            <div class="card" onclick="showEvent('event5')">
+              <div class="card-badge" style="background-color: var(--warning);">Курсы</div>
+              <div class="card-img">
+                <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Подготовка к ЕНТ">
+              </div>
+              <div class="card-content">
+                <div class="card-title">ҰБТ-ға дайындық курстары: математика, физика</div>
+                <div class="card-stats">
+                  <div class="stat"><i class="fas fa-eye"></i> 1,987</div>
+                  <div class="stat"><i class="far fa-comment"></i> 56</div>
+                  <div class="stat"><i class="far fa-heart"></i> 178</div>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Шестая карточка -->
+            <div class="card" onclick="showEvent('event6')">
+              <div class="card-badge" style="background-color: #3a0ca3;">Олимпиада</div>
+              <div class="card-img">
+                <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Республиканская олимпиада">
+              </div>
+              <div class="card-content">
+                <div class="card-title">РЕСПУБЛИКАЛЫҚ ПӘНДІК ОЛИМПИАДА 2024</div>
+                <div class="card-stats">
+                  <div class="stat"><i class="fas fa-eye"></i> 3,210</div>
+                  <div class="stat"><i class="far fa-comment"></i> 92</div>
+                  <div class="stat"><i class="far fa-heart"></i> 345</div>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Седьмая карточка -->
+            <div class="card" onclick="showEvent('event7')">
+              <div class="card-badge" style="background-color: #4cc9f0;">Семинар</div>
+              <div class="card-img">
+                <img src="https://images.unsplash.com/photo-1524179091875-bf99a9a9a57e?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Семинар для учителей">
+              </div>
+              <div class="card-content">
+                <div class="card-title">Мұғалімдерге арналған семинар: "Жаңа әдістемелер"</div>
+                <div class="card-stats">
+                  <div class="stat"><i class="fas fa-eye"></i> 876</div>
+                  <div class="stat"><i class="far fa-comment"></i> 34</div>
+                  <div class="stat"><i class="far fa-heart"></i> 112</div>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Восьмая карточка -->
+            <div class="card" onclick="showEvent('event8')">
+              <div class="card-badge" style="background-color: #f72585;">Марафон</div>
+              <div class="card-img">
+                <img src="https://images.unsplash.com/photo-1588072432836-e10032774350?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Марафон для 11 классов">
+              </div>
+              <div class="card-content">
+                <div class="card-title">11-СЫНЫП ОҚУШЫЛАРЫНА АРНАЛҒАН ҰБТ МАРАФОНЫ</div>
+                <div class="card-stats">
+                  <div class="stat"><i class="fas fa-eye"></i> 2,543</div>
+                  <div class="stat"><i class="far fa-comment"></i> 78</div>
+                  <div class="stat"><i class="far fa-heart"></i> 267</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      
+        <!-- Страницы мероприятий -->
+        <!-- Марафон для 10 классов -->
+        <div id="event1" class="event-page">
+          <div class="event-header">
+            <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Марафон" class="event-image">
+            <button class="back-btn" onclick="hideEvent()"><i class="fas fa-arrow-left"></i></button>
+          </div>
+          
+          <h2 class="event-title">10-СЫНЫПТАР ҮШІІІН!!! 2 КҮНДІК МАРАФОН</h2>
+          
+          <div class="event-description">
+            <p>Ерекше 2 күндік марафонға қош келдіңіздер! Бұл марафон 10-сынып оқушыларына арналған және олардың пәндер бойынша білімдерін тереңдете түсуге көмектеседі.</p>
+            <p>Марафон барысында:</p>
+            <ul>
+              <li>Математика</li>
+              <li>Физика</li>
+              <li>Химия</li>
+              <li>Биология</li>
+              <li>Тарих</li>
+              <li>Қазақ тілі мен әдебиеті</li>
+            </ul>
+            <p>пәндері бойынша ерекше тапсырмалар мен тесттер ұсынылады. Марафон соңында барлық қатысушыларға сертификат беріледі және үздік нәтиже көрсеткен оқушылар марапатталады.</p>
+          </div>
+          
+          <div class="event-details">
+            <div class="detail-item">
+              <i class="fas fa-calendar-alt"></i>
+              <span><strong>Дата:</strong> 15-16 мамыр 2024 жыл</span>
+            </div>
+            <div class="detail-item">
+              <i class="fas fa-clock"></i>
+              <span><strong>Уақыт:</strong> 10:00 - 17:00</span>
+            </div>
+            <div class="detail-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <span><strong>Орын:</strong> Нұр-Сұлтан, Бейбітшілік көшесі 10, "Bilim" білім орталығы</span>
+            </div>
+            <div class="detail-item">
+              <i class="fas fa-user-tie"></i>
+              <span><strong>Ұйымдастырушы:</strong> "Bilim" білім орталығы</span>
+            </div>
+            <div class="detail-item">
+              <i class="fas fa-money-bill-wave"></i>
+              <span><strong>Құны:</strong> 15 000 ₸ (екі күнге)</span>
+            </div>
+            <div class="detail-item">
+              <i class="fas fa-users"></i>
+              <span><strong>Қатысушылар:</strong> 10-сынып оқушылары</span>
+            </div>
+          </div>
+          
+          <button class="event-register-btn"><i class="fas fa-user-plus"></i> Тіркелу</button>
+        </div>
+      
+        <!-- Акция 8 марта -->
+        <div id="event2" class="event-page">
+          <div class="event-header">
+            <img src="https://images.unsplash.com/photo-1541178735493-479c1a27ed24?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Акция 8 марта" class="event-image">
+            <button class="back-btn" onclick="hideEvent()"><i class="fas fa-arrow-left"></i></button>
+          </div>
+          
+          <h2 class="event-title">8-НАУРЫЗҒА ОРАЙ КУРСҚА ТІРКЕЛУГЕ -50% ЖЕҢІЛДІК</h2>
+          
+          <div class="event-description">
+            <p>8 Наурыз мерекесіне орай біз қыздарға арнап арнайы жеңілдік ұсынамыз! Білім орталығымыздың барлық курстарына тіркелуге 50% жеңілдік.</p>
+            <p>Акция аясында қол жетімді курстар:</p>
+            <ul>
+              <li>ҰБТ-ға дайындық (барлық пәндер бойынша)</li>
+              <li>Ағылшын тілі (барлық деңгейлер)</li>
+              <li>Программирование (Python, Java, Web-разработка)</li>
+              <li>Математиканы тереңдетіп оқыту</li>
+              <li>Шетел университеттеріне дайындық</li>
+            </ul>
+            <p>Акция тек қыздарға арналған және 2024 жылдың 1-10 наурыз аралығында тіркелгендерге қолданылады. Жеңілдікті пайдалану үшін "Қыздар мерекесі" промокодын көрсету қажет.</p>
+          </div>
+          
+          <div class="event-details">
+            <div class="detail-item">
+              <i class="fas fa-calendar-alt"></i>
+              <span><strong>Акция мерзімі:</strong> 1-10 наурыз 2024 жыл</span>
+            </div>
+            <div class="detail-item">
+              <i class="fas fa-clock"></i>
+              <span><strong>Курс басталуы:</strong> Наурыздың 15-інен бастап</span>
+            </div>
+            <div class="detail-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <span><strong>Орын:</strong> Алматы, Абай даңғылы 52, 3-қабат</span>
+            </div>
+            <div class="detail-item">
+              <i class="fas fa-user-tie"></i>
+              <span><strong>Ұйымдастырушы:</strong> "Zerde" білім академиясы</span>
+            </div>
+            <div class="detail-item">
+              <i class="fas fa-percentage"></i>
+              <span><strong>Жеңілдік мөлшері:</strong> 50% (тек қыздарға)</span>
+            </div>
+          </div>
+          
+          <button class="event-register-btn"><i class="fas fa-tag"></i> Акцияны пайдалану</button>
+        </div>
+      
+        <!-- ЕНТ правила -->
+        <div id="event3" class="event-page">
+          <div class="event-header">
+            <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="ЕНТ правила" class="event-image">
+            <button class="back-btn" onclick="hideEvent()"><i class="fas fa-arrow-left"></i></button>
+          </div>
+          
+          <h2 class="event-title">ҰБТ ЕРЕЖЕЛЕРІ 2024: ЖАҢА ӨЗГЕРІСТЕР</h2>
+          
+          <div class="event-description">
+            <p>2024 жылғы Бірыңғай ұлттық тестілеу (ҰБТ) ережелерінде бірқатар өзгерістер енгізілді. Бұл семинарда сіз:</p>
+            <ul>
+              <li>2024 жылғы ҰБТ-ның жаңа ережелерімен танысасыз</li>
+              <li>Тапсырмалардың құрылымы мен бағалау жүйесін білесіз</li>
+              <li>Тиімді дайындық әдістерін үйренесіз</li>
+              <li>Психологиялық дайындық бойынша кеңес аласыз</li>
+              <li>ҰБТ кезіндегі қателерді болдырмау жолдарын білесіз</li>
+            </ul>
+            <p>Семинарға 11-сынып оқушылары, ата-аналар және мұғалімдер қатыса алады. Семинар соңында барлық қатысушыларға ҰБТ-2024 ресми ережелерінің жинағы беріледі.</p>
+          </div>
+          
+          <div class="event-details">
+            <div class="detail-item">
+              <i class="fas fa-calendar-alt"></i>
+              <span><strong>Дата:</strong> 20 наурыз 2024 жыл</span>
+            </div>
+            <div class="detail-item">
+              <i class="fas fa-clock"></i>
+              <span><strong>Уақыт:</strong> 15:00 - 18:00</span>
+            </div>
+            <div class="detail-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <span><strong>Орын:</strong> Қарағанды, Нұрсұлтан Назарбаев даңғылы 32, "BilimLand" орталығы</span>
+            </div>
+            <div class="detail-item">
+              <i class="fas fa-user-tie"></i>
+              <span><strong>Оқытушы:</strong> Әлия Смағұлова, ҰБТ эксперті, педагогика ғылымдарының кандидаты</span>
+            </div>
+            <div class="detail-item">
+              <i class="fas fa-money-bill-wave"></i>
+              <span><strong>Құны:</strong> 5 000 ₸ (ата-аналар үшін тегін)</span>
+            </div>
+          </div>
+          
+          <button class="event-register-btn"><i class="fas fa-user-plus"></i> Тіркелу</button>
+        </div>
+      
+        <!-- Гранты на обучение -->
+        <div id="event4" class="event-page">
+          <div class="event-header">
+            <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Гранты на обучение" class="event-image">
+            <button class="back-btn" onclick="hideEvent()"><i class="fas fa-arrow-left"></i></button>
+          </div>
+          
+          <h2 class="event-title">Гранттық түсу мүмкіндігі - ҰБТ дайындық</h2>
+          
+          <div class="event-description">
+            <p>Біздің арнайы бағдарламамыз грантқа түсуге дайындалған оқушыларға арналған. Бағдарлама аясында сіз:</p>
+            <ul>
+              <li>Қазақстанның жоғары оқу орындарына грантпен түсу критерийлерін үйренесіз</li>
+              <li>Гранттық конкурста жеңіске жету стратегияларын білесіз</li>
+              <li>ҰБТ-да жоғары балл жинауға арналған арнайы әдістермен танысасыз</li>
+              <li>Өзіңізге лайықты мамандықты таңдау бойынша кеңес аласыз</li>
+              <li>Құжаттарды дұрыс толтыру технологиясын меңгересіз</li>
+            </ul>
+            <p>Бағдарлама 3 айға созылады және аптасына 4 рет 2 сағаттан өтеді. Бағдарламаны сәтті аяқтаған оқушыларға грантқа өтініш беру кезінде көмек көрсетіледі.</p>
+          </div>
+          
+          <div class="event-details">
+            <div class="detail-item">
+              <i class="fas fa-calendar-alt"></i>
+              <span><strong>Басталуы:</strong> 10 сәуір 2024 жыл</span>
+            </div>
+            <div class="detail-item">
+              <i class="fas fa-clock"></i>
+              <span><strong>Сабақ кестесі:</strong> Дүйсенбі, сәрсенбі, жұма, сенбі (18:00 - 20:00)</span>
+            </div>
+            <div class="detail-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <span><strong>Орын:</strong> Шымкент, Тәуелсіздік даңғылы 45, "Оқу" орталығы</span>
+            </div>
+            <div class="detail-item">
+              <i class="fas fa-user-tie"></i>
+              <span><strong>Оқытушылар:</strong> Тәжік Әбдірахманов (математика), Айгүл Сапарбаева (қазақ тілі), Дмитрий Петров (физика)</span>
+            </div>
+            <div class="detail-item">
+              <i class="fas fa-money-bill-wave"></i>
+              <span><strong>Құны:</strong> 45 000 ₸/ай (3 айға)</span>
+            </div>
+          </div>
+          
+          <button class="event-register-btn"><i class="fas fa-graduation-cap"></i> Грантқа дайындалу</button>
+        </div>
+      
+        <!-- Курсы подготовки к ЕНТ -->
+        <div id="event5" class="event-page">
+          <div class="event-header">
+            <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Курсы подготовки к ЕНТ" class="event-image">
+            <button class="back-btn" onclick="hideEvent()"><i class="fas fa-arrow-left"></i></button>
+          </div>
+          
+          <h2 class="event-title">ҰБТ-ға дайындық курстары: математика, физика</h2>
+          
+          <div class="event-description">
+            <p>Математика және физика пәндерінен ҰБТ-ға арналған арнайы дайындық курстары. Курс барысында:</p>
+            <ul>
+              <li>ҰБТ-да жиі кездесетін тақырыптарды терең қарастырамыз</li>
+              <li>Типтік есептерді шешу әдістерін үйренесіз</li>
+              <li>Өткен жылдардың тест тапсырмаларын талдаймыз</li>
+              <li>Уақытты тиімді пайдалану стратегияларын меңгересіз</li>
+              <li>Өз деңгейіңізді бақылау үшін ай сайын пробный тест өткіземіз</li>
+            </ul>
+            <p>Курс 4 айға созылады. Аптасына 3 рет 1,5 сағаттан сабақ өтеді. Топтар 6-8 адамнан құралады, бұл әр оқушыға жеке көңіл бөлуге мүмкіндік береді.</p>
+          </div>
+          
+          <div class="event-details">
+            <div class="detail-item">
+              <i class="fas fa-calendar-alt"></i>
+              <span><strong>Басталуы:</strong> 5 ақпан 2024 жыл</span>
+            </div>
+            <div class="detail-item">
+              <i class="fas fa-clock"></i>
+              <span><strong>Сабақ кестесі:</strong> Сейсенбі, бейсенбі, жексенбі (16:30 - 18:00)</span>
+            </div>
+            <div class="detail-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <span><strong>Орын:</strong> Атырау, Азаттық даңғылы 12, "Ziyat" білім орталығы</span>
+            </div>
+            <div class="detail-item">
+              <i class="fas fa-user-tie"></i>
+              <span><strong>Оқытушы:</strong> Арман Жолдыбаев, математика маманы, ҰБТ дайындық бойынша 10 жылдық тәжірибе</span>
+            </div>
+            <div class="detail-item">
+              <i class="fas fa-money-bill-wave"></i>
+              <span><strong>Құны:</strong> 30 000 ₸/ай (4 айға)</span>
+            </div>
+          </div>
+          
+          <button class="event-register-btn"><i class="fas fa-book-open"></i> Курсқа тіркелу</button>
+        </div>
+      
+        <!-- Республиканская олимпиада -->
+        <div id="event6" class="event-page">
+          <div class="event-header">
+            <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Республиканская олимпиада" class="event-image">
+            <button class="back-btn" onclick="hideEvent()"><i class="fas fa-arrow-left"></i></button>
+          </div>
+          
+          <h2 class="event-title">РЕСПУБЛИКАЛЫҚ ПӘНДІК ОЛИМПИАДА 2024</h2>
+          
+          <div class="event-description">
+            <p>Қазақстан Республикасы Білім және Ғылым министрлігінің ұйымдастыруымен жыл сайынғы республикалық пәндік олимпиада өтеді. Олимпиадаға 9-11 сынып оқушылары қатыса алады.</p>
+            <p>Олимпиада кезеңдері:</p>
+            <ul>
+              <li>Мектеп кезеңі (қазан айы)</li>
+              <li>Аудандық/қалалық кезең (қараша айы)</li>
+              <li>Облыстық кезең (желтоқсан айы)</li>
+              <li>Республикалық кезең (ақпан-наурыз айлары)</li>
+            </ul>
+            <p>Олимпиада өтетін пәндер: математика, физика, химия, биология, информатика, география, қазақ тілі мен әдебиеті, орыс тілі мен әдебиеті, тарих, ағылшын тілі.</p>
+            <p>Республикалық кезеңде жеңімпаздар мен жүлдегерлерді университеттерге грантпен түсуге ұсыныс жасалады.</p>
+          </div>
+          
+          <div class="event-details">
+            <div class="detail-item">
+              <i class="fas fa-calendar-alt"></i>
+              <span><strong>Республикалық кезең:</strong> 15 ақпан - 10 наурыз 2024 жыл</span>
+            </div>
+            <div class="detail-item">
+              <i class="fas fa-clock"></i>
+              <span><strong>Әр пән бойынша уақыт:</strong> 4 сағат</span>
+            </div>
+            <div class="detail-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <span><strong>Орын:</strong> Нұр-Сұлтан, Республикалық дарынды балаларға арналған мектеп-интернат</span>
+            </div>
+            <div class="detail-item">
+              <i class="fas fa-user-tie"></i>
+              <span><strong>Ұйымдастырушы:</strong> ҚР Білім және Ғылым министрлігі</span>
+            </div>
+            <div class="detail-item">
+              <i class="fas fa-money-bill-wave"></i>
+              <span><strong>Қатысу құны:</strong> Тегін (облыс бойынша қаржыландырылады)</span>
+            </div>
+          </div>
+          
+          <button class="event-register-btn"><i class="fas fa-medal"></i> Олимпиадаға тіркелу</button>
+        </div>
+      
+        <!-- Семинар для учителей -->
+        <div id="event7" class="event-page">
+          <div class="event-header">
+            <img src="семинар.jpeg" alt="Семинар для учителей" class="event-image">
+            <button class="back-btn" onclick="hideEvent()"><i class="fas fa-arrow-left"></i></button>
+          </div>
+          
+          <h2 class="event-title">Мұғалімдерге арналған семинар: "Жаңа әдістемелер"</h2>
+          
+          <div class="event-description">
+            <p>Заманауи білім берудегі соңғы әдістемелерге арналған семинар. Семинарда сіз:</p>
+            <ul>
+              <li>Оқушылардың белсенділігін арттыру әдістерін үйренесіз</li>
+              <li>Сабақты қызықты және тиімді ұйымдастыру технологияларымен танысасыз</li>
+              <li>Цифрлық құралдарды сабақта қолдану тәсілдерін білесіз</li>
+              <li>Әр оқушының жеке ерекшеліктерін ескере отырып оқыту стратегияларын меңгересіз</li>
+              <li>Жаңа білім беру стандарттары мен оларды іс жүзінде қолдану жолдарын үйренесіз</li>
+            </ul>
+            <p>Семинар 2 күнге созылады. Семинар аяқталғаннан кейін барлық қатысушыларға сертификат беріледі және методикалық құралдар жинағы таратылады.</p>
+          </div>
+          
+          <div class="event-details">
+            <div class="detail-item">
+              <i class="fas fa-calendar-alt"></i>
+              <span><strong>Дата:</strong> 25-26 қаңтар 2024 жыл</span>
+            </div>
+            <div class="detail-item">
+              <i class="fas fa-clock"></i>
+              <span><strong>Уақыт:</strong> 09:00 - 17:00 (түскі үзіліспен)</span>
+            </div>
+            <div class="detail-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <span><strong>Орын:</strong> Алматы, Абай даңғылы 8, "Білім" академиясы</span>
+            </div>
+            <div class="detail-item">
+              <i class="fas fa-user-tie"></i>
+              <span><strong>Оқытушылар:</strong> Профессор Марат Қалиев (педагогика ғылымдарының докторы), Айгүл Садықова (инновациялық әдістемелер эксперті)</span>
+            </div>
+            <div class="detail-item">
+              <i class="fas fa-money-bill-wave"></i>
+              <span><strong>Құны:</strong> 25 000 ₸ (2 күнге)</span>
+            </div>
+          </div>
+          
+          <button class="event-register-btn"><i class="fas fa-chalkboard-teacher"></i> Семинарға тіркелу</button>
+        </div>
+      
+        <!-- Марафон для 11 классов -->
+        <div id="event8" class="event-page">
+          <div class="event-header">
+            <img src="https://images.unsplash.com/photo-1588072432836-e10032774350?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Марафон для 11 классов" class="event-image">
+            <button class="back-btn" onclick="hideEvent()"><i class="fas fa-arrow-left"></i></button>
+          </div>
+          
+          <h2 class="event-title">11-СЫНЫП ОҚУШЫЛАРЫНА АРНАЛҒАН ҰБТ МАРАФОНЫ</h2>
+          
+          <div class="event-description">
+            <p>ҰБТ-ға қалған соңғы айларды тиімді пайдалануға арналған арнайы марафон. Марафон 4 аптаға созылады және аптасына 6 күн 3 сағаттан өтеді.</p>
+            <p>Марафон бағдарламасы:</p>
+            <ul>
+              <li>1-апта: Математика (алгебра, геометрия, статистика)</li>
+              <li>2-апта: Қазақ тілі мен әдебиеті</li>
+              <li>3-апта: Тарих және Қазақстан тарихы</li>
+              <li>4-апта: Физика және химия</li>
+            </ul>
+            <p>Әр апта соңында пробный тест өткізіледі және нәтижелері талданады. Марафон соңында барлық қатысушыларға ҰБТ-ға дейінгі соңғы ұсыныстар беріледі және сертификат таратылады.</p>
+            <p>Марафонға қатысқан оқушылардың 87%-ы ҰБТ-дан 100 баллдан жоғары нәтиже көрсеткен.</p>
+          </div>
+          
+          <div class="event-details">
+            <div class="detail-item">
+              <i class="fas fa-calendar-alt"></i>
+              <span><strong>Басталуы:</strong> 1 сәуір 2024 жыл</span>
+            </div>
+            <div class="detail-item">
+              <i class="fas fa-clock"></i>
+              <span><strong>Сабақ кестесі:</strong> Дүйсенбі-сенбі (15:00 - 18:00)</span>
+            </div>
+            <div class="detail-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <span><strong>Орын:</strong> Ақтау, Шакарим көшесі 15, "Daryn" білім орталығы</span>
+            </div>
+            <div class="detail-item">
+              <i class="fas fa-user-tie"></i>
+              <span><strong>Оқытушылар:</strong> ҰБТ эксперттерінен тұратын тәжірибелі топ</span>
+            </div>
+            <div class="detail-item">
+              <i class="fas fa-money-bill-wave"></i>
+              <span><strong>Құны:</strong> 60 000 ₸ (4 аптаға, материалдар қоса)</span>
+            </div>
+          </div>
+          
+          <button class="event-register-btn"><i class="fas fa-running"></i> Марафонға қатысу</button>
+        </div>
+      
+        <!-- Модальные окна для входа и регистрации -->
+        <div id="login-modal" style="display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.5); z-index: 1000; justify-content: center; align-items: center;">
+          <div style="background: white; padding: 25px; border-radius: 12px; width: 90%; max-width: 400px; box-shadow: 0 5px 15px rgba(0,0,0,0.3);">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+              <h3 style="margin: 0; color: var(--dark);">Вход в аккаунт</h3>
+              <button onclick="hideModal()" style="background: none; border: none; font-size: 20px; cursor: pointer; color: var(--gray);">&times;</button>
+            </div>
+            <form>
+              <div style="margin-bottom: 15px;">
+                <label style="display: block; margin-bottom: 5px; color: var(--dark);">Email или телефон</label>
+                <input type="text" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 8px; font-size: 14px;">
+              </div>
+              <div style="margin-bottom: 20px;">
+                <label style="display: block; margin-bottom: 5px; color: var(--dark);">Пароль</label>
+                <input type="password" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 8px; font-size: 14px;">
+              </div>
+              <button type="button" style="width: 100%; padding: 12px; background: var(--primary); color: white; border: none; border-radius: 8px; font-weight: 600; cursor: pointer; margin-bottom: 15px;">Войти</button>
+              <div style="text-align: center;">
+                <a href="#" style="color: var(--primary); text-decoration: none; font-size: 14px;">Забыли пароль?</a>
+              </div>
+            </form>
+            <div style="margin-top: 20px; text-align: center; font-size: 14px;">
+              Нет аккаунта? <a href="#" onclick="showRegisterModal()" style="color: var(--primary); text-decoration: none; font-weight: 500;">Зарегистрироваться</a>
+            </div>
+          </div>
+        </div>
+      
+        <div id="register-modal" style="display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.5); z-index: 1000; justify-content: center; align-items: center;">
+          <div style="background: white; padding: 25px; border-radius: 12px; width: 90%; max-width: 400px; box-shadow: 0 5px 15px rgba(0,0,0,0.3);">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+              <h3 style="margin: 0; color: var(--dark);">Регистрация</h3>
+              <button onclick="hideModal()" style="background: none; border: none; font-size: 20px; cursor: pointer; color: var(--gray);">&times;</button>
+            </div>
+            <form>
+              <div style="margin-bottom: 15px;">
+                <label style="display: block; margin-bottom: 5px; color: var(--dark);">ФИО</label>
+                <input type="text" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 8px; font-size: 14px;">
+              </div>
+              <div style="margin-bottom: 15px;">
+                <label style="display: block; margin-bottom: 5px; color: var(--dark);">Email</label>
+                <input type="email" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 8px; font-size: 14px;">
+              </div>
+              <div style="margin-bottom: 15px;">
+                <label style="display: block; margin-bottom: 5px; color: var(--dark);">Телефон</label>
+                <input type="tel" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 8px; font-size: 14px;">
+              </div>
+              <div style="margin-bottom: 15px;">
+                <label style="display: block; margin-bottom: 5px; color: var(--dark);">Пароль</label>
+                <input type="password" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 8px; font-size: 14px;">
+              </div>
+              <div style="margin-bottom: 20px;">
+                <label style="display: block; margin-bottom: 5px; color: var(--dark);">Подтвердите пароль</label>
+                <input type="password" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 8px; font-size: 14px;">
+              </div>
+              <button type="button" style="width: 100%; padding: 12px; background: var(--primary); color: white; border: none; border-radius: 8px; font-weight: 600; cursor: pointer; margin-bottom: 15px;">Зарегистрироваться</button>
+            </form>
+            <div style="margin-top: 20px; text-align: center; font-size: 14px;">
+              Уже есть аккаунт? <a href="#" onclick="showLoginModal()" style="color: var(--primary); text-decoration: none; font-weight: 500;">Войти</a>
+            </div>
+          </div>
+        </div>
+      
+    </div>
+
+    <!-- Event pages осында болады -->
+    <div id="event1" class="event-page" style="display:none;">
+      <div class="event-header">
+        <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=800&q=80" alt="Марафон" class="event-image">
+        <button class="back-btn" onclick="hideEvent()"><i class="fas fa-arrow-left"></i></button>
+      </div>
+      <h2 class="event-title">10-СЫНЫПТАР ҮШІН 2 КҮНДІК МАРАФОН</h2>
+      <div class="event-description">
+        <p>Екі күн ішінде пәндер бойынша арнайы марафон.</p>
+      </div>
+      <button class="event-register-btn">Тіркелу</button>
+    </div>
+  </div>
+
+  <script>
+    function showEvent(eventId) {
+      document.getElementById('main-page').querySelector('.content-cards').style.display = 'none';
+      document.getElementById(eventId).style.display = 'block';
+    }
+
+    function hideEvent() {
+      document.getElementById('main-page').querySelector('.content-cards').style.display = 'grid';
+      const events = document.querySelectorAll('.event-page');
+      events.forEach(e => e.style.display = 'none');
+    }
+  </script>
+</body>
+</html>
